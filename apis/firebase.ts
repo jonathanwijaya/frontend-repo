@@ -1,15 +1,15 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDlkArhRLqql2OIYPn_BLanU-KN9U0p16I",
-  authDomain: "backend-ebuddy-a11db.firebaseapp.com",
-  databaseURL: "https://backend-ebuddy-a11db-default-rtdb.firebaseio.com",
-  projectId: "backend-ebuddy-a11db",
-  storageBucket: "backend-ebuddy-a11db.firebasestorage.app",
-  messagingSenderId: "1018116589710",
-  appId: "1:1018116589710:web:626523322e07022be5a1df",
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  databaseURL: process.env.NEXT_PUBLIC_DATABASE_URL,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
